@@ -182,6 +182,11 @@ public:
         return atual->valor;
     }
 
+    const &operator=(const LDE &ldeCopia)
+    {
+        copia(ldeCopia);
+    }
+
     friend ostream &operator<<<T>(ostream &saida, const LDE &ldeCopia);
 };
 
@@ -254,6 +259,13 @@ int main()
     cout << "COUT DA LDE2: " << endl;
     cout << lde2;
     cout << lde;
+
+    cout << "COUT ANTES DO IGUAL: " << endl;
+    cout << lde2;
+
+    cout << "COUT DEPOIS DO IGUAL: " << endl;
+    lde2 = lde;
+    cout << lde2;
 
     return 0;
 }
