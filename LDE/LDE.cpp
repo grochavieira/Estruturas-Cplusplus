@@ -76,7 +76,7 @@ public:
             atual = atual->proximo;
         }
 
-        if (anterior == NULL)
+        if (!anterior)
         {
             primeiro = novo;
         }
@@ -196,7 +196,7 @@ ostream &operator<<(ostream &saida, const LDE<T> &ldeCopia)
     No<T> *atual = ldeCopia.primeiro;
     while (atual)
     {
-        saida << atual->valor << " ";
+        saida << *atual;
         atual = atual->proximo;
     }
     saida << endl;
