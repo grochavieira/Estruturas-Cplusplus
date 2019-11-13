@@ -44,8 +44,6 @@ private:
 
         int indexFilhoDireito = filhoDireitoIndex(indexAtual);
         int indexFilhoEsquerdo = filhoEsquerdoIndex(indexAtual);
-        cout << "VALOR DO INDEX: " << indexAtual << " HEAP: " << heap[indexAtual]
-             << " FILHO ESQUERDO: " << heap[indexFilhoEsquerdo] << " FILHO DIREITO: " << heap[indexFilhoDireito] << endl;
         int menorValorIndex = indexAtual;
         if (indexFilhoEsquerdo < inseridos && indexFilhoEsquerdo != -1 && heap[indexFilhoEsquerdo] < heap[menorValorIndex])
         {
