@@ -275,7 +275,6 @@ public:
             }
             delete atual;
             inseridos--;
-            return true;
         }
         else if (filhos == 1)
         {
@@ -303,7 +302,6 @@ public:
             auxiliar = pai;
             delete atual;
             inseridos--;
-            return true;
         }
         else
         {
@@ -311,9 +309,9 @@ public:
             auxiliar = Sucessor(atual)->pai;
             Remove(valorSucessor);
             atual->valor = valorSucessor;
-            return true;
-        }
+                }
         balanceiaArvore(auxiliar);
+        return true;
     }
 
     bool Remove(No<T> *no)
